@@ -89,8 +89,16 @@ namespace Exercicio6PilhaFilaNotaAlunos
             {
                 if (matriculaAtual.getMatricula() == matricula)
                 {
+                    if(matriculaAtual.getNota1() == 0  && matriculaAtual.getNota2() == 0)
+                    {
+                        Console.WriteLine("\nO aluno não possui notas ou não existe.");
+                        Console.ReadLine();
+                    }
+                    else 
+                    { 
                     Console.WriteLine("\nA media das notas é: {0:0.00}", (matriculaAtual.getNota1() + matriculaAtual.getNota2()) / 2);
-                }
+                    }
+                    }
                 matriculaAtual = matriculaAtual.getNext();
             }
         }
